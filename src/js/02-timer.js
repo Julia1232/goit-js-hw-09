@@ -1,4 +1,6 @@
 import flatpickr from "flatpickr";
+
+import Notiflix from 'notiflix';
 //Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 
@@ -34,6 +36,8 @@ const options = {
       refs.btnStart.disabled = true;
       Notiflix.Notify.failure('Qui timide rogat docet negare');
     } else {
+      
+      window.alert("Please choose a date in the future")
       refs.btnStart.disabled = false;
     }
 
